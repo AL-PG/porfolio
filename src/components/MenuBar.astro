@@ -1,0 +1,28 @@
+---
+
+---
+
+<aside class="w-65 h-50 mr-10  text-white flex flex-col justify-center items-center font-anta text-2xl relative">
+    <div class="swiper">
+    <!-- Additional required wrapper -->
+        <ul class="swiper-wrapper rounded-full border border-[#7232F2] p-5">
+            <!-- Slides -->
+            <li class="swiper-slide">Slide 1</li>
+            <li class="swiper-slide">Slide 2</li>
+            <li class="swiper-slide">Slide 3</li>
+            ...
+        </ul>
+    </div>
+</aside>
+
+<script>
+    import Swiper from "swiper";
+    import "swiper/css";
+
+    const swiper = new Swiper('.swiper', {
+        direction: 'vertical',
+        loop: true,
+        slidesPerView: 5,
+
+    });
+</script>

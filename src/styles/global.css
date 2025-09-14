@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-anta: 'Anta', sans-serif;
+    --inset-shadow-glow: 
+    0 0px 250px rgba(114,50, 242, 0.55), 0 0 250px rgba(114,50, 242, 0.55), 
+    0 0 250px rgba(114,50, 242, 0.25), 0 0 250px rgba(114,50, 242, 0.25),
+    0 0 75px rgba(114,50, 242, 0.15), 0 0 35px rgba(114,50, 242, 0.15);
+}
