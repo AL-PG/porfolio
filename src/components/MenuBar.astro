@@ -2,16 +2,17 @@
 
 ---
 
-<aside class="w-65 h-50 mr-10  text-white flex flex-col justify-center items-center font-anta text-2xl relative">
-    <div class="swiper">
-    <!-- Additional required wrapper -->
-        <ul class="swiper-wrapper rounded-full border border-[#7232F2] p-5">
-            <!-- Slides -->
-            <li class="swiper-slide">Slide 1</li>
-            <li class="swiper-slide">Slide 2</li>
-            <li class="swiper-slide">Slide 3</li>
-            ...
-        </ul>
+<aside
+    class="w-65 h-65 mr-10 text-white flex flex-col justify-center items-center font-anta text-2xl
+    rounded-full border border-[#7232F2] transform -translate-x-1/2 -translate-y-20 transition-all duration-300 
+    hover:scale-120 hover:border-3"
+>
+    <div class="swiper transform translate-x-35 h-full w-full">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide text-center opacity-50 -translate-x-10 transition-all duration-300">About Me</div>
+            <div class="swiper-slide text-center opacity-50 -translate-x-10 transition-all duration-300">Proyects</div>
+            <div class="swiper-slide text-center opacity-50 -translate-x-10 transition-all duration-300">Technologies</div>
+        </div>
     </div>
 </aside>
 
@@ -19,10 +20,34 @@
     import Swiper from "swiper";
     import "swiper/css";
 
-    const swiper = new Swiper('.swiper', {
-        direction: 'vertical',
-        loop: true,
-        slidesPerView: 5,
-
+    const swiper = new Swiper(".swiper", {
+        direction: "vertical",
+        grabCursor: true,
+        
+        slidesPerView: 3,
+        centeredSlides: true,
+        effect: "creative",
     });
 </script>
+
+<style>
+
+    .swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .swiper .swiper-slide-active {
+        font-size: 2rem;
+        color: #7232F2;
+        transform: translateX(40px);
+        opacity: 1;
+        text-shadow:
+            0 0 5px #7232F2,  
+            0 0 10px #7232F2, 
+            0 0 20px #7232F2,  
+            0 0 30px #7232F2; 
+        
+    }
+</style>

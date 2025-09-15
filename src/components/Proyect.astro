@@ -1,0 +1,53 @@
+---
+import ProyectCard from "./ProyectCard.astro";
+---
+
+<div
+    class="w-150 text-white flex flex-col justify-center items-center font-anta text-2xl relative mt-10"
+>
+    <div class="swiper-proyect transform translate-x-35 h-full w-full">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide opacity-50"><ProyectCard /></div>
+            <div class="swiper-slide opacity-50"><ProyectCard /></div>
+            <div class="swiper-slide opacity-50"><ProyectCard /></div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script>
+    import Swiper from "swiper";
+    import "swiper/css";
+
+    const swiper = new Swiper(".swiper-proyect", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+</script>
+
+<style>
+    .swiper-proyect .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+
+    .swiper-proyect .swiper-slide-active {
+        z-index: 10;
+        opacity: 1;
+    }
+</style>
