@@ -1,10 +1,11 @@
 ---
 import MenuBar from "./MenuBar.astro";
 import Proyect from "./Proyect.astro";
+import Footer from "./Footer.astro";
 ---
 
-<div class="container">
-	<main class="flex flex-row bg-[#1F1F1F] h-100vh w-100vw">
+<div class="container mx-auto">
+	<main class="flex bg-[#1F1F1F] h-100vh w-100vw">
 		
 		<div class="h-fit flex justify-center sticky top-0 z-50">
 			<MenuBar />
@@ -53,7 +54,8 @@ import Proyect from "./Proyect.astro";
 						</p>
 
 						<div class="flex flex-row gap-10 mt-10">
-							<a href="#" class="hover:scale-140 transition-all duration-300">
+							<a href="https://github.com/AL-PG" rel="noopener" target="_blank"
+							class="hover:scale-140 transition-all duration-300">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="54"
@@ -69,7 +71,8 @@ import Proyect from "./Proyect.astro";
 									></path></svg
 								>
 							</a>
-							<a href="#" class="hover:scale-140 transition-all duration-300">
+							<a href="https://www.linkedin.com/in/aldo-noe-pacheco-gaona-3a4842382/" rel="noopener" target="_blank"
+							class="hover:scale-140 transition-all duration-300">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="54"
@@ -105,6 +108,8 @@ import Proyect from "./Proyect.astro";
 
 
 			</article>
+			<Footer/>
 		</section>
+		<!-- FOOTER -->
 	</main>
 </div>
