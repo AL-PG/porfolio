@@ -1,5 +1,65 @@
-<div class="w-130 h-150 text-white font-anta flex flex-col border border-white rounded-2xl">
-    <img src="" alt="">
-    <p></p>
+---
+const { description, img, tech, title } = Astro.props;
+---
 
+<div
+    class="wrapper w-130 h-145 text-white font-anta flex flex-col shadow-2xl 
+     rounded-2xl p-0.5"
+>   
+    <div class="bg-[#1F1F1F] rounded-2xl p-5 h-full flex flex-col justify-between">
+        <img src={img} alt="Imagen del proyecto" class="rounded-lg aspect-video" />
+            <h2 class="uppercase mt-5">{title}</h2>
+        <p class="text-lg mt-2">{description}</p>
+
+        <div class="flex flex-row justify-between items-center mt-5">
+            <div class="flex flex-row gap-2">
+                {tech && tech.map((technology: string) => (
+                    <img src={technology} alt="Technology" class="h-12 w-12" />   
+                ))}
+            </div>
+
+            <button class="flex flex-row justify-center items-center gap-2 rounded-full px-2 py-2 bg-[#707070]"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                        d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path
+                        d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+                    ></path></svg
+                >
+            </button>
+        </div>
+    </div>
 </div>
+
+<style>
+    .wrapper::before {
+        background: conic-gradient(
+            from 180deg at 50% 50%,
+            #7232f2,
+            #b898f9,
+            #b471eb,
+            #7232f2
+        );
+
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 10px;
+        right: 10px;
+        bottom: -1px;
+        z-index: -1;
+        filter: blur(20px);
+        border-radius: 16px;
+        opacity: 0.7;
+    }
+
+</style>
