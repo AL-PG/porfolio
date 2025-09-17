@@ -1,5 +1,6 @@
 ---
-const { description, img, tech, title } = Astro.props;
+import Icon from "./Icon.astro";
+const { description, img, tech, title, path } = Astro.props;
 ---
 
 <div
@@ -14,11 +15,14 @@ const { description, img, tech, title } = Astro.props;
         <div class="flex flex-row justify-between items-center lg:mt-5">
             <div class="flex flex-row gap-2">
                 {tech && tech.map((technology: string) => (
-                    <img src={technology} alt="Technology" class="w-8 h-8 lg:h-12 lg:w-12" />   
+                    <div class="w-8 h-8 lg:h-12 lg:w-12">
+                        <Icon name={technology} border={false} />
+                    </div> 
                 ))}
             </div>
 
-            <button class="flex flex-row justify-center items-center gap-2 rounded-full p-1.5 lg:p-2 bg-[#707070]"
+            <a href={path} rel="noopener" target="_blank" 
+            class={`flex flex-row justify-center items-center gap-2 rounded-full p-1.5 lg:p-2 ${path ? "bg-[#7232F2]" : "bg-[#707070]"}`}
                 ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width=""
@@ -35,7 +39,7 @@ const { description, img, tech, title } = Astro.props;
                         d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
                     ></path></svg
                 >
-            </button>
+            </a>
         </div>
     </div>
 </div>

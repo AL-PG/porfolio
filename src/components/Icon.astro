@@ -14,7 +14,7 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 type IconName = 'javascript' | 'java' | 'python'| 'html' | 'css' | 'react' | 'tailwind' | 'astro' | 'spanish'| 'us' ;
 
 interface Props {
-    name:IconName
+    name:IconName | string
     border:Boolean
 }
 const icons: Record<IconName, AstroComponentFactory> = {
@@ -32,7 +32,7 @@ const icons: Record<IconName, AstroComponentFactory> = {
 
 const { name, border, ...props } = Astro.props;
 
-const IconComponent = icons[name];
+const IconComponent = icons.hasOwnProperty(name) ? icons[name as IconName] : undefined;
 
 ---
 
