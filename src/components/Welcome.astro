@@ -7,21 +7,16 @@ import Abilities from "./Abilities.astro";
 
 <div class="container mx-auto max-w-300">
 	<main class="flex flex-col bg-[#1F1F1F] h-100vh w-100vw">
-		
-		<div class="hidden sticky top-0 z-50">
-			<MenuBar />
-		</div>
-
 		<section>
 			<!-- ABOUT ME -->
 			<article>
 				<div class="text-[#F0F0F0] uppercase font-anta flex flex-col m-6">
-					<h1 id="about" class="text-[80px] self-center">software</h1>
+					<h1 id="about" class="text-4xl md:text-[80px] self-center">software</h1>
 					<div
 						class="flex flex-row-reverse justify-evenly items-center gap-5"
 					>
-						<h1 class="text-[80px]">developer</h1>
-						<p class="text-[32px]">
+						<h1 class="text-4xl md:text-[80px]">developer</h1>
+						<p class="text-lg md:text-[32px]">
 							hi, i'm
 							<span
 								class="text-[#7232F2] text inset-shadow-glow outline-none bg-[#7232F2]/25"
@@ -34,35 +29,37 @@ import Abilities from "./Abilities.astro";
 				<hr class="border border-[#F0F0F0] mx-auto" />
 
 				<div
-					class="flex flex-row justify-between gap-15 items-center mt-10 font-anta"
+					class="flex flex-col md:flex-row justify-between gap-15 items-center mx-5 mt-10 font-anta"
 				>
 					<img
 						src="src/assets/yo.png"
 						alt="Selfie"
-						class="h-110 w-100"
+						class="max-h-100 max-w-100"
 					/>
 					<div>
-						<p class="text-[#F0F0F0] max-w-140 text-2xl">
+						<p class="text-[#F0F0F0] max-w-140 md:text-2xl">
 							Software engineer with experience in full-stack
 							development using technologies like JavaScript and Java.
 							Constantly learning to solve problems both
 							professionally and personally.
 						</p>
-						<p class="text-[#F0F0F0] max-w-140 text-2xl mt-10">
-							Apasionado de estar constantemente resolviendo problemas
-							y en estar en continuo desafío
+						<p class="text-[#F0F0F0] max-w-140 md:text-2xl mt-10">
+							I have developed strong skills in
+							teamwork, problem-solving, and independent learning, which
+							enable me to adapt easily to new academic and professional
+							challenges.
 						</p>
 
-						<div class="flex flex-row gap-10 mt-10">
+						<div class="flex flex-row gap-10 mt-10 max-md:justify-center max-md:items-center">
 							<a href="https://github.com/AL-PG" rel="noopener" target="_blank"
 							class="hover:scale-140 transition-all duration-300">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									width="54"
-									height="54"
+									width=""
+									height=""
 									viewBox="0 0 24 24"
 									fill="#F0F0F0"
-									class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"
+									class="w-13 h-13 icon icon-tabler icons-tabler-filled icon-tabler-brand-github"
 									><path
 										stroke="none"
 										d="M0 0h24v24H0z"
@@ -79,7 +76,7 @@ import Abilities from "./Abilities.astro";
 									height="54"
 									viewBox="0 0 24 24"
 									fill="#F0F0F0"
-									class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
+									class=" icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
 									><path
 										stroke="none"
 										d="M0 0h24v24H0z"
@@ -94,7 +91,7 @@ import Abilities from "./Abilities.astro";
 			</article>
 			<!-- TECHNOLOGIES -->
 			<article class="text-[#F0F0F0] font-anta flex flex-col m-6 mt-20">
-					<h1 id="tech" class="text-[80px] uppercase self-center">Abilities</h1>
+					<h1 id="tech" class="text-4xl md:text-[80px] uppercase self-center">Abilities</h1>
 					<hr class="border border-[#F0F0F0] mx-auto w-full" />
 
 					<Abilities />
@@ -102,7 +99,7 @@ import Abilities from "./Abilities.astro";
 
 			<!-- PROJECTS -->
 			<article class="text-[#F0F0F0] font-anta flex flex-col items-center justify-center mx-6 my-20">
-					<h1 id="proyects" class="text-[80px] uppercase">proyects</h1>
+					<h1 id="proyects" class="text-4xl md:text-[80px] uppercase">proyects</h1>
 					<hr class="border border-[#F0F0F0] mx-auto w-full" />
 					<Proyect />
 			</article>

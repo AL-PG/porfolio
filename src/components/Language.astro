@@ -2,24 +2,24 @@
 import Icon from "./Icon.astro";
 ---
 
-<article class="flex flex-row w-full justify-evenly">
+<article class="flex flex-row w-full justify-between md:justify-evenly">
     <div
-        class="gap-3 w-55 h-60 flex flex-col justify-center items-center shadow-[0_5px_15px_0] shadow-[#7232F2] rounded-xl transform hover:scale-110 transition-all duration-300 py-5 px-6"
+        class="gap-3 max-w-55 max-h-60 flex flex-col justify-center items-center shadow-[0_5px_15px_0] shadow-[#7232F2] rounded-xl transform hover:scale-110 transition-all duration-300 py-5 px-6"
     >
-        <h3 class="text-3xl font-bold">Spanish</h3>
-        <div class="w-25 h-25">
+        <h3 class="text-xl md:text-3xl font-bold">Spanish</h3>
+        <div class="w-25 h-20 md:w-50 md:h-25">
             <Icon name="spanish" border={false} />
         </div>
-        <p class="text-3xl">Native</p>
+        <p class="text-xl md:text-3xl">Native</p>
     </div>
 
     <div
-        class="gap-3 w-55 h-60 self-end flex flex-col justify-center items-center shadow-[0_5px_15px_0] shadow-[#7232F2] rounded-xl transform hover:scale-110 transition-all duration-300 py-5 px-6"
+        class="gap-3 max-w-55 max-h-60 self-end flex flex-col justify-center items-center shadow-[0_5px_15px_0] shadow-[#7232F2] rounded-xl transform hover:scale-110 transition-all duration-300 py-5 px-6"
     >
-        <h3 class="text-3xl font-bold">English</h3>
-        <div class="w-25 h-25">
+        <h3 class="text-xl md:text-3xl font-bold">English</h3>
+        <div class="w-25 h-20 md:w-50 md:h-25">
             <Icon name="us" border={false} />
         </div>
-        <p class="text-3xl">B2</p>
+        <p class="text-xl md:text-3xl">B2</p>
     </div>
 </article>
