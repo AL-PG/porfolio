@@ -1,0 +1,54 @@
+---
+import Javascript from "src/assets/javascript.svg";
+import Java from "src/assets/java.svg";
+import Python from "src/assets/python.svg";
+import Html from "src/assets/html.svg";
+import Css from "src/assets/css.svg";
+import React from "src/assets/react.svg";
+import Tailwind from "src/assets/tailwind.svg";
+import Atro from "src/assets/astro-icon-light-gradient.svg";
+import Spanish from "src/assets/spain.svg";
+import US from "src/assets/us.svg";
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+type IconName = 'javascript' | 'java' | 'python'| 'html' | 'css' | 'react' | 'tailwind' | 'astro' | 'spanish'| 'us' ;
+
+interface Props {
+    name:IconName
+    border:Boolean
+}
+const icons: Record<IconName, AstroComponentFactory> = {
+    javascript: Javascript,
+    java: Java,
+    python: Python,
+    html: Html,
+    css: Css,
+    react: React,
+    tailwind: Tailwind,
+    astro: Atro,
+    spanish:Spanish,
+    us: US,
+};
+
+const { name, border, ...props } = Astro.props;
+
+const IconComponent = icons[name];
+
+---
+
+{border ? (
+    <div class="w-20 h-20 p-3 shadow shadow-[#7232F2] rounded-xl transform hover:scale-140 transition-all duration-300">
+        {IconComponent && <IconComponent {...props} />}
+    </div>
+) : (
+    <div class="w-full h-full"> 
+        {IconComponent && <IconComponent {...props} />}
+    </div>
+)}
+
+<style>
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+</style>

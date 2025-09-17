@@ -1,0 +1,22 @@
+---
+import Icon from "./Icon.astro";
+import Education from "./Education.astro";
+import Language from "./Language.astro";
+---
+
+<div class="grid grid-cols-[1fr_2fr] gap-20 mt-10">
+    <div class="grid grid-cols-2 place-items-center gap-10">
+        <Icon name="astro" border={true}/>
+        <Icon name="javascript" border={true}/>
+        <Icon name="html" border={true}/>
+        <Icon name="css" border={true}/>
+        <Icon name="tailwind" border={true}/>
+        <Icon name="react" border={true} />
+        <Icon name="java" border={true}/>
+        <Icon name="python" border={true}/>
+    </div>
+    <div class="flex flex-col justify-center items-center gap-20">
+        <Education />
+        <Language />
+    </div>
+</div>

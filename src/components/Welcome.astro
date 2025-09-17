@@ -2,21 +2,21 @@
 import MenuBar from "./MenuBar.astro";
 import Proyect from "./Proyect.astro";
 import Footer from "./Footer.astro";
+import Abilities from "./Abilities.astro";
 ---
 
-<div class="container mx-auto">
-	<main class="flex bg-[#1F1F1F] h-100vh w-100vw">
+<div class="container mx-auto max-w-300">
+	<main class="flex flex-col bg-[#1F1F1F] h-100vh w-100vw">
 		
-		<div class="h-fit flex justify-center sticky top-0 z-50">
+		<div class="hidden sticky top-0 z-50">
 			<MenuBar />
 		</div>
 
-		<section class="">
-
+		<section>
 			<!-- ABOUT ME -->
 			<article>
-				<div class="text-white uppercase font-anta flex flex-col m-6">
-					<h1 class="text-[80px] self-center">software</h1>
+				<div class="text-[#F0F0F0] uppercase font-anta flex flex-col m-6">
+					<h1 id="about" class="text-[80px] self-center">software</h1>
 					<div
 						class="flex flex-row-reverse justify-evenly items-center gap-5"
 					>
@@ -31,24 +31,24 @@ import Footer from "./Footer.astro";
 					</div>
 				</div>
 
-				<hr class="border border-white mx-auto" />
+				<hr class="border border-[#F0F0F0] mx-auto" />
 
 				<div
 					class="flex flex-row justify-between gap-15 items-center mt-10 font-anta"
 				>
 					<img
-						src="src/assets/selfie.svg"
+						src="src/assets/yo.png"
 						alt="Selfie"
-						class="h-100 w-100"
+						class="h-110 w-100"
 					/>
 					<div>
-						<p class="text-white max-w-140 text-2xl">
+						<p class="text-[#F0F0F0] max-w-140 text-2xl">
 							Software engineer with experience in full-stack
 							development using technologies like JavaScript and Java.
 							Constantly learning to solve problems both
 							professionally and personally.
 						</p>
-						<p class="text-white max-w-140 text-2xl mt-10">
+						<p class="text-[#F0F0F0] max-w-140 text-2xl mt-10">
 							Apasionado de estar constantemente resolviendo problemas
 							y en estar en continuo desafío
 						</p>
@@ -61,7 +61,7 @@ import Footer from "./Footer.astro";
 									width="54"
 									height="54"
 									viewBox="0 0 24 24"
-									fill="white"
+									fill="#F0F0F0"
 									class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"
 									><path
 										stroke="none"
@@ -78,7 +78,7 @@ import Footer from "./Footer.astro";
 									width="54"
 									height="54"
 									viewBox="0 0 24 24"
-									fill="white"
+									fill="#F0F0F0"
 									class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
 									><path
 										stroke="none"
@@ -92,21 +92,19 @@ import Footer from "./Footer.astro";
 					</div>
 				</div>
 			</article>
+			<!-- TECHNOLOGIES -->
+			<article class="text-[#F0F0F0] font-anta flex flex-col m-6 mt-20">
+					<h1 id="tech" class="text-[80px] uppercase self-center">Abilities</h1>
+					<hr class="border border-[#F0F0F0] mx-auto w-full" />
 
-			<!-- PROJECTS -->
-			<article class="text-white font-anta flex flex-col m-6 mt-20">
-					<h1 class="text-[80px] self-center uppercase">proyects</h1>
-					<hr class="border border-white mx-auto w-full" />
-
-					<Proyect />
+					<Abilities />
 			</article>
 
-			<!-- TECHNOLOGIES -->
-			<article class="text-white uppercase font-anta flex flex-col m-6 mt-20">
-					<h1 class="text-[80px] self-center">technologies</h1>
-					<hr class="border border-white mx-auto w-full" />
-
-
+			<!-- PROJECTS -->
+			<article class="text-[#F0F0F0] font-anta flex flex-col items-center justify-center mx-6 my-20">
+					<h1 id="proyects" class="text-[80px] uppercase">proyects</h1>
+					<hr class="border border-[#F0F0F0] mx-auto w-full" />
+					<Proyect />
 			</article>
 			<Footer/>
 		</section>
